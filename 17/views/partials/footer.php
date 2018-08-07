@@ -1,0 +1,3 @@
+<!-- footer partials -->
+</body>
+</html>

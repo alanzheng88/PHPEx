@@ -1,10 +1,8 @@
-<?php 
-    
-$query = require 'bootstrap.php';
-require 'functions.php';
+<?php
+
 require 'Task.php';
 
-$tasks = $query->selectAll('todos');
+$tasks = $app['database']->selectAll('todos');
 
 // here, we do mapping ourselves
 // alternatively, we can add the classname as a second argument
@@ -16,6 +14,4 @@ $tasks = array_map(function ($task) {
     return $t;
 }, $tasks);
 
-// dd($tasks);
-
-require 'index.view.php';
+require 'views/index.view.php';
